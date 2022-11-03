@@ -1,0 +1,17 @@
+service: live-apps-serverless
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: ap-south-1
+
+functions:
+  hello:
+    handler: ./src/functions/hello.handler
+    events:
+      - http:
+          path: hello
+          method: get
+
+plugins:
+  - serverless-plugin-typescript
