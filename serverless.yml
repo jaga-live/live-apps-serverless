@@ -2,7 +2,7 @@ service: live-apps-serverless
 
 provider:
   name: aws
-  runtime: nodejs14.x
+  runtime: nodejs12.x
   region: ap-south-1
 
 functions:
@@ -15,3 +15,4 @@ functions:
 
 plugins:
   - serverless-plugin-typescript
+  - serverless-offline
